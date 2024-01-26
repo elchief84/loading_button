@@ -1,8 +1,8 @@
 import 'package:example/provider_theme.dart';
 import 'package:example/themes/custom_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:loading_button/loading_button.dart';
-import 'package:loading_button/loading_button_state.dart';
+import 'package:circular_loading_button/loading_button.dart';
+import 'package:circular_loading_button/loading_button_state.dart';
 import 'package:provider/provider.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 library loading_button;
 
 import 'package:flutter/material.dart';
-import 'package:loading_button/loading_button_state.dart';
+import 'package:circular_loading_button/loading_button_state.dart';
 import 'loading_button_type.dart';
 
 export 'loading_button_type.dart';

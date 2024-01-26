@@ -15,13 +15,13 @@ Follow these steps to use this package
 
 ```yaml
 dependencies:
-  loading_button: ^1.0.0
+  circular_loading_button: ^1.0.0
 ```
 
 ### Add import package
 
 ```dart
-import 'package:loading_button/loading_button.dart';
+import 'package:circular_loading_button/loading_button.dart';
 ```
 
 ### Easy to use
