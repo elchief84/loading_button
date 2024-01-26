@@ -1,6 +1,1 @@
-enum LoadingButtonType {
-  elevated,
-  filled,
-  filledTonal,
-  outlined
-}
+enum LoadingButtonType { elevated, filled, filledTonal, outlined }
