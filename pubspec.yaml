@@ -1,6 +1,6 @@
 name: circular_loading_button
-description: Flutter loading/progress button
-version: 1.0.0
+description: circular_loading_button is simple Flutter loading/progress animated button.
+version: 1.0.1
 homepage: https://github.com/elchief84/loading_button
 
 environment:

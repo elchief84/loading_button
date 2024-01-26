@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 7.0.0-dev">
+  <meta name="description" content="circular_loading_button API docs, for the Dart programming language.">
+  <title>circular_loading_button - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/elchief84/loading_button">circular_loading_button package</a></li>
+  </ol>
+  <div class="self-name">circular_loading_button</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="loading_button">loading_button</h1>
+<p><strong>loading_button</strong> is a flutter loading/progress animated button.</p>
+<p><img src="https://github.com/elchief84/loading_button/blob/master/example/sample.gif" alt=""> <img src="https://github.com/elchief84/loading_button/blob/master/example/theme.gif" alt=""></p>
+<p><strong>loading_button</strong> is implemented using native flutter buttons type (ElevatedButton, FilledButton, OutlinedButton at this moment). For this reason it is customizable throught your app theme</p>
+<p>Try at <a href="https://dartpad.dev/?id=c1eabfeb0bf1a2474d1249be07a2c468">demo on DartPad</a></p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Follow these steps to use this package</p>
+<h3 id="add-dependency">Add dependency</h3>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  circular_loading_button: ^1.0.0
+</code></pre>
+<h3 id="add-import-package">Add import package</h3>
+<pre class="language-dart"><code class="language-dart">import 'package:circular_loading_button/loading_button.dart';
+</code></pre>
+<h3 id="easy-to-use">Easy to use</h3>
+<p>Simple example of use LoadingButton<br>
+Put this code in your project at an screen and learn how it works 😊</p>
+<pre class="language-dart"><code class="language-dart">// set initial button state
+LoadingButtonState _currentState = LoadingButtonState.idle;
+
+LoadingButton(
+  type: LoadingButtonType.elevated,
+  state: _currentState,
+  onPressed: () {
+    // change button state to loading
+    setState(() =&gt; _currentState = LoadingButtonState.loading);
+    
+    // wait 3 seconds and set button state to idle
+    Future.delayed(const Duration(seconds: 3), () =&gt; setState(() =&gt; _currentState = LoadingButtonState.idle));
+    },
+  child: const Text('Tap me!')
+)
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<p>You can define button sizes in loading and idle state simply adding 'expandedSize' and 'loadingSize' parameters.</p>
+<pre class="language-dart"><code class="language-dart">LoadingButton(
+    type: LoadingButtonType.elevated,
+    state: _currentState,
+    expandedSize: const Size(250.0, 80.0),
+    loadingSize: const Size(30.0, 30.0),
+    onPressed: () {
+      // TODO your actions
+    },
+    child: const Text('Tap me!')
+)
+</code></pre>
+<h2 id="contributions">Contributions</h2>
+<p>All contributions are welcome!
+Contributions are what make the open source community such an amazing place to be learned, inspire, and create. Any contributions you make are greatly appreciated.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="loading_button">
+  <span class="name"><a href="loading_button/loading_button-library.html">loading_button</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="loading_button_state">
+  <span class="name"><a href="loading_button_state/loading_button_state-library.html">loading_button_state</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="loading_button_type">
+  <span class="name"><a href="loading_button_type/loading_button_type-library.html">loading_button_type</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://github.com/elchief84/loading_button">circular_loading_button package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">circular_loading_button</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="loading_button/loading_button-library.html">loading_button</a></li>
+      <li><a href="loading_button_state/loading_button_state-library.html">loading_button_state</a></li>
+      <li><a href="loading_button_type/loading_button_type-library.html">loading_button_type</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    circular_loading_button
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
