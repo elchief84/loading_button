@@ -6,6 +6,10 @@ import 'loading_button_type.dart';
 
 export 'loading_button_type.dart';
 
+/// A wrapoer to Flutter Buttons ([ElevatedButton], [FilledButton],
+/// [FilledButton.tonal], [OutlinedButton]) to introduce a loading
+/// animation in any async context (ex: disable button during
+/// an http call)
 class LoadingButton extends StatefulWidget {
   final LoadingButtonType type;
   final bool animated;
@@ -21,6 +25,14 @@ class LoadingButton extends StatefulWidget {
   final Size? expandedSize;
   final Size? loadingSize;
 
+  /// Create a LoadingButton.
+  ///
+  /// The [state] and [animated] arguments must not be null.
+  /// The [animated] field is currently unused, but reserved
+  /// for next implementations (es: enable/disable button animation)
+  ///
+  /// Other parameters are the same of [ElevatedButton], [FilledButton],
+  /// [FilledButton.tonal] and [OutlinedButton]
   const LoadingButton({
     super.key,
     required this.type,

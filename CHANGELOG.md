@@ -6,3 +6,7 @@
 
 * added doc
 * code cleaning
+
+## 1.0.2
+
+* api documentation
