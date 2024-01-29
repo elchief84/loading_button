@@ -8,7 +8,4 @@ import 'package:flutter/material.dart';
 ///
 /// When [LoadingButtonState.idle] the button is active
 /// and any gesture event are fired
-enum LoadingButtonState {
-  loading,
-  idle
-}
+enum LoadingButtonState { loading, idle }

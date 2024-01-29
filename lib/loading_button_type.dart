@@ -13,9 +13,4 @@ import 'package:flutter/material.dart';
 ///
 /// When [LoadingButtonType.outlined] the button is created
 /// with an [OutlinedButton]
-enum LoadingButtonType {
-  elevated,
-  filled,
-  filledTonal,
-  outlined
-}
+enum LoadingButtonType { elevated, filled, filledTonal, outlined }

@@ -10,3 +10,7 @@
 ## 1.0.2
 
 * api documentation
+
+## 1.0.3
+
+* code cleaning
