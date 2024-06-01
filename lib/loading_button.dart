@@ -20,7 +20,7 @@ class LoadingButton extends StatefulWidget {
   final ValueChanged<bool>? onFocusChange;
   final ButtonStyle? style;
   final FocusNode? focusNode;
-  final MaterialStatesController? statesController;
+  final WidgetStatesController? statesController;
   final Widget? child;
   final Size? expandedSize;
   final Size? loadingSize;

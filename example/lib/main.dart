@@ -75,47 +75,47 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            SegmentedButton<int>(
-              showSelectedIcon: false,
-              segments: const <ButtonSegment<int>>[
-                ButtonSegment<int>(value: 0, label: Text('Purple')),
-                ButtonSegment<int>(value: 1, label: Text('Purple SQ')),
-                ButtonSegment<int>(value: 2, label: Text('Orange')),
-                ButtonSegment<int>(value: 3, label: Text('Orange SQ')),
-              ],
-              selected: <int>{_currentIndex},
-              onSelectionChanged: (Set<int> newSelection) {
-                setState(() {
-                  _currentIndex = newSelection.first;
-                });
-                provider.currentTheme = themes[_currentIndex];
-              },
-            ),
-            const Spacer(),
-            ...List.generate(
-              types.length,
-              (index) => Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 10.0),
-                child: LoadingButton(
-                    type: types[index],
-                    state: currentStates[index],
-                    expandedSize: const Size(250.0, 80.0),
-                    loadingSize: const Size(30.0, 30.0),
-                    onPressed: () {
-                      _changeState(index);
-                      Future.delayed(const Duration(seconds: 3),
-                          () => _changeState(index));
-                    },
-                    child: const Text('Tap me!')),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
+            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              SegmentedButton<int>(
+                showSelectedIcon: false,
+                segments: const <ButtonSegment<int>>[
+                  ButtonSegment<int>(value: 0, label: Text('Purple')),
+                  ButtonSegment<int>(value: 1, label: Text('Purple SQ')),
+                  ButtonSegment<int>(value: 2, label: Text('Orange')),
+                  ButtonSegment<int>(value: 3, label: Text('Orange SQ')),
+                ],
+                selected: <int>{_currentIndex},
+                onSelectionChanged: (Set<int> newSelection) {
+                  setState(() {
+                    _currentIndex = newSelection.first;
+                  });
+                  provider.currentTheme = themes[_currentIndex];
+                },
               ),
-            ),
-            const Spacer(),
-          ]),
+              ...List.generate(
+                types.length,
+                (index) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10.0),
+                  child: LoadingButton(
+                      type: types[index],
+                      state: currentStates[index],
+                      expandedSize: const Size(250.0, 80.0),
+                      loadingSize: const Size(30.0, 30.0),
+                      onPressed: () {
+                        _changeState(index);
+                        Future.delayed(const Duration(seconds: 3),
+                            () => _changeState(index));
+                      },
+                      child: const Text('Tap me!')),
+                ),
+              ),
+            ]),
+          ),
         ),
       ),
     );
